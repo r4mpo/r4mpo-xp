@@ -512,15 +512,15 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   position: relative;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
   position: relative;
 }
 
@@ -778,7 +778,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Projetos Pessoais Section
+# Github Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
@@ -1128,7 +1128,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contato .php-email-form button[type=submit] {
+.contato .php-email-form button[type=button] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1137,12 +1137,12 @@ section,
   border-radius: 50px;
 }
 
-.contato .php-email-form button[type=submit]:hover {
+.contato .php-email-form button[type=button]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
 /*--------------------------------------------------------------
-# Projetos Pessoais Details Section
+# Github Details Section
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
