@@ -619,29 +619,29 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Sobre Section
+# about Section
 --------------------------------------------------------------*/
-.sobre .content h2 {
+.about .content h2 {
   font-weight: 700;
   font-size: 24px;
 }
 
-.sobre .content ul {
+.about .content ul {
   list-style: none;
   padding: 0;
 }
 
-.sobre .content ul li {
+.about .content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
-.sobre .content ul strong {
+.about .content ul strong {
   margin-right: 10px;
 }
 
-.sobre .content ul i {
+.about .content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: var(--accent-color);
@@ -719,9 +719,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Resumo Section
+# summary Section
 --------------------------------------------------------------*/
-.resumo .resumo-title {
+.summary .summary-title {
   color: var(--heading-color);
   font-size: 26px;
   font-weight: 700;
@@ -729,14 +729,14 @@ section,
   margin-bottom: 20px;
 }
 
-.resumo .resumo-item {
+.summary .summary-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid var(--accent-color);
   position: relative;
 }
 
-.resumo .resumo-item h4 {
+.summary .summary-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -745,7 +745,7 @@ section,
   margin-bottom: 10px;
 }
 
-.resumo .resumo-item h5 {
+.summary .summary-item h5 {
   font-size: 16px;
   padding: 5px 15px;
   display: inline-block;
@@ -753,19 +753,19 @@ section,
   margin-bottom: 10px;
 }
 
-.resumo .resumo-item ul {
+.summary .summary-item ul {
   padding-left: 20px;
 }
 
-.resumo .resumo-item ul li {
+.summary .summary-item ul li {
   padding-bottom: 10px;
 }
 
-.resumo .resumo-item:last-child {
+.summary .summary-item:last-child {
   padding-bottom: 0;
 }
 
-.resumo .resumo-item::before {
+.summary .summary-item::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -1041,25 +1041,25 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Contato Section
+# contact Section
 --------------------------------------------------------------*/
-.contato .info-wrap {
+.contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
 @media (max-width: 575px) {
-  .contato .info-wrap {
+  .contact .info-wrap {
     padding: 20px;
   }
 }
 
-.contato .info-item {
+.contact .info-item {
   margin-bottom: 40px;
 }
 
-.contato .info-item i {
+.contact .info-item i {
   font-size: 20px;
   color: var(--accent-color);
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -1073,25 +1073,25 @@ section,
   margin-right: 15px;
 }
 
-.contato .info-item h3 {
+.contact .info-item h3 {
   padding: 0;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-.contato .info-item p {
+.contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
 }
 
-.contato .info-item:hover i {
+.contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.contato .php-email-form {
+.contact .php-email-form {
   background-color: var(--surface-color);
   height: 100%;
   padding: 30px;
@@ -1099,14 +1099,14 @@ section,
 }
 
 @media (max-width: 575px) {
-  .contato .php-email-form {
+  .contact .php-email-form {
     padding: 20px;
   }
 }
 
-.contato .php-email-form input[type=text],
-.contato .php-email-form input[type=email],
-.contato .php-email-form textarea {
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
@@ -1116,19 +1116,19 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contato .php-email-form input[type=text]:focus,
-.contato .php-email-form input[type=email]:focus,
-.contato .php-email-form textarea:focus {
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contato .php-email-form input[type=text]::placeholder,
-.contato .php-email-form input[type=email]::placeholder,
-.contato .php-email-form textarea::placeholder {
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contato .php-email-form button[type=button] {
+.contact .php-email-form button[type=button] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1137,7 +1137,7 @@ section,
   border-radius: 50px;
 }
 
-.contato .php-email-form button[type=button]:hover {
+.contact .php-email-form button[type=button]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
