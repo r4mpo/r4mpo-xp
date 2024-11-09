@@ -20,3 +20,4 @@ O objetivo do projeto é criar um ambiente propício à manutenção de um portf
 * views -> Aplicam-se à parte visual do projeto, contendo HTML, CSS e JavaScript;
 * public -> Arquivos de acesso público, como folhas de estilo;
 * core -> arquivos de núcleo, como rotas ou bases para conexões com bancos de dados;
+* utils -> utilitários do sistema;

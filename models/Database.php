@@ -23,7 +23,7 @@ class Database
             $pdo = $this->getConnection();
             $stmt = $pdo->prepare("SELECT * FROM " . $this->table);
             $stmt->execute();
-            $data = $stmt->fetch();
+            $data = $stmt->fetchAll();
         } catch (\Exception $e) {
             echo $e->getMessage();
             exit;

@@ -22,7 +22,9 @@ class PortfolioController extends BaseController
         $data = [];
 
         $profile = new Profile();
-        $data["profile"] = $profile->all();
+        $profile = $profile->all();
+
+        $data["profile"] = $profile[0];
 
         if (!empty($data["profile"]["birthday"])) {
             $birthday = new \DateTime($data["profile"]["birthday"]);
@@ -30,6 +32,9 @@ class PortfolioController extends BaseController
             $diff = $birthday->diff($now);
             $data["profile"]["age"] = $diff;
         }
+
+        $skills = new Skill();
+        $data["skills"] = $skills->all();
 
         return $data;
     }
