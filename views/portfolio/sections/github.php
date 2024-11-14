@@ -5,28 +5,21 @@
     </div>
     <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
-
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="public/assets/img/github/laravel.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">PEOPLEPRO</h5>
-                        <p class="card-text">Sistema ERP desenvolvido com Laravel e outras tecnologias</p>
-                        <a href="github/peoplepro.html" target="_blank" class="btn btn-danger"><i class="bi bi-eye"></i></a>
+            <?php foreach ($data["github"] as $project): ?>
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<?php echo $project["logo"]; ?>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $project["title"]; ?></h5>
+                            <p class="card-text"><?php echo $project["description"]; ?></p>
+                            <a href="<?php echo $project["doc"]; ?>" target="_blank" class="btn btn-danger"><i class="bi bi-filetype-html"></i></a>
+                            <?php if (!is_null($project["host"])): ?>
+                                <a href="<?php echo $project["host"]; ?>" target="_blank" class="btn btn-primary"><i class="bi bi-link-45deg"></i></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="public/assets/img/github/laravel-vue.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">MYJOBS</h5>
-                        <p class="card-text">Projeto de microsserviços com Laravel, Vue.JS e Tailwind</p>
-                        <a href="github/myjobs.html" target="_blank" class="btn btn-danger"><i class="bi bi-eye"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

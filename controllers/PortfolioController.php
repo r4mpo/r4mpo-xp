@@ -36,6 +36,12 @@ class PortfolioController extends BaseController
         $skills = new Skill();
         $data["skills"] = $skills->all();
 
+        $github = new Github();
+        $data["github"] = $github->all();
+
+        $social_medias = new SocialMedias();
+        $data["social_medias"] = $social_medias->all();
+
         return $data;
     }
 
