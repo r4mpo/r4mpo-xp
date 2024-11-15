@@ -15,13 +15,14 @@ class Database
         }
     }
 
-    public function all(): mixed
+    public function all($conditions = null): mixed
     {
         $data = [];
 
         try {
             $pdo = $this->getConnection();
-            $stmt = $pdo->prepare("SELECT * FROM " . $this->table);
+            $query = "SELECT * FROM " . $this->table . (!empty($conditions) ? " " . $conditions : "");
+            $stmt = $pdo->prepare($query);
             $stmt->execute();
             $data = $stmt->fetchAll();
         } catch (\Exception $e) {

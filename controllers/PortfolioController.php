@@ -42,6 +42,14 @@ class PortfolioController extends BaseController
         $social_medias = new SocialMedias();
         $data["social_medias"] = $social_medias->all();
 
+        // Educational
+        $summaries = new Summary();
+        $conditions = "WHERE type = " . $summaries->getType("education");
+        $data["education"] = $summaries->all($conditions);
+        // Professional
+        $conditions = "WHERE type = " . $summaries->getType("profission");
+        $data["profission"] = $summaries->all($conditions);
+
         return $data;
     }
 
