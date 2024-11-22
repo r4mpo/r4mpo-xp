@@ -1,7 +1,11 @@
 <?php
 
 require_once __DIR__ . "/core/Core.php";
+require_once __DIR__ . "/models/Database.php";
 require_once __DIR__ . "/router/routes.php";
+
+$database = new Database();
+$database->prepareDataBaseInitial();
 
 spl_autoload_register(function ($file) {
     if (file_exists(__DIR__ . "/utils/" . $file . ".php")) {

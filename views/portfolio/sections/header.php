@@ -15,7 +15,7 @@
             <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
             <li><a href="#summary"><i class="bi bi-file-earmark-text navicon"></i> Resumo</a></li>
             <li><a href="#github"><i class="bi bi-github navicon"></i> Github</a></li>
-            <li><a href="#contact"><i class="bi bi-whatsapp navicon"></i> Contato</a></li>
+            <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
         </ul>
     </nav>
 </header>

@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-md-12 text-center">
                             <div class="error-message"></div>
-                            <button type="button" onclick="enviar_mensagem_whatsapp_redirecionar()">Enviar p/ WhatsApp</button>
+                            <button type="button">Enviar</button>
                         </div>
                     </div>
                 </form>
