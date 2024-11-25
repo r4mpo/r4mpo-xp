@@ -4,9 +4,13 @@ class HomeController extends BaseController
 {
     public function index(): void
     {
+        $urlCard = $this->getRouteBase() . "/portfolio";
+        $alert = "";
 
-        $alert = $_SESSION["alert"] ?? "";
-        unset($_SESSION["alert"]);
+        if (!empty($_SESSION["alert"])) {
+            $alert = $_SESSION["alert"] ?? "";
+            unset($_SESSION["alert"]);
+        }
 
         $this->loadView([
             "view"          => 'home/index',
@@ -14,6 +18,7 @@ class HomeController extends BaseController
             'alert'         => $alert,
             "scripts"       => $this->scripts,
             "stylesheets"   => $this->stylesheets,
+            "urlCard"       => $urlCard
         ]);
     }
 }

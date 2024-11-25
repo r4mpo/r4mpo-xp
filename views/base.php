@@ -25,8 +25,8 @@
 
 <?php
 
-if (isset($_SESSION["alert"]) && !empty($_SESSION["alert"])) {
-    echo $_SESSION["alert"];
+if (isset($alert) && !empty($alert)) {
+    echo $alert;
 }
 
 require_once __DIR__ . "/" . $view . ".php";

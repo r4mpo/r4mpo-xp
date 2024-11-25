@@ -1141,6 +1141,13 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+.full-card-home {
+  min-height: 100vh; /* Garante que ocupe a altura total da tela */
+  display: flex; /* Usa o modelo de flexbox */
+  justify-content: center; /* Alinha o card horizontalmente */
+  align-items: center; /* Alinha o card verticalmente */
+}
+
 /*--------------------------------------------------------------
 # Github Details Section
 --------------------------------------------------------------*/

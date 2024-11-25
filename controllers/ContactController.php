@@ -27,7 +27,7 @@ class ContactController extends BaseController
             $type = "success";
         }
 
-        $alert = "<div class='alert alert-$type alert-dismissible fade show' role='alert'><strong>Opa!</strong> $result<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+        $alert = "<div class='alert alert-$type alert-dismissible fade show' role='alert'><strong>Opa!</strong> $result</div>";
         
         $_SESSION["alert"] = $alert;
         header("Location: " . $this->getRouteBase() . "/");
