@@ -5,15 +5,28 @@ class Database
     protected $table;
     protected $pdo;
 
+    // Dados vindos do .env do projeto
+    private $dbname;
+    private $host;
+    private $username;
+    private $password;
+
     public function __construct()
     {
+        #--------------------------------------------#
+        $this->dbname   = getenv("MY_DBNAME");
+        $this->host     = getenv("MY_HOST");
+        $this->username = getenv("MY_USERNAME");
+        $this->password = getenv("MY_PASSWORD");
+        #--------------------------------------------#
+
         $this->pdo = $this->getConnection();
     }
 
     public function getConnection(): PDO
     {
         try {
-            $pdo = new PDO("mysql:dbname=portfolio_db;host=localhost", "root", "");
+            $pdo = new PDO("mysql:dbname=$this->dbname;host=$this->host", $this->username, $this->password);
             return $pdo;
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -158,7 +171,7 @@ class Database
         WHERE NOT EXISTS (SELECT 1 FROM summaries_tbl WHERE id = 3);
         
         INSERT INTO summaries_tbl (html, type)
-        SELECT '<div class=\"summary-item\"><h4>Analista Programador PHP</h4><h5>08/2023 - Atualmente</h5><p>Grupo Criar - <em>Ribeirão Preto, São Paulo (Presencial) </em></p><ul><li>Convivência em um ambiente de desenvolvimento de tecnologias de forma presencial. Neste, havia o constante uso de ferramentas como PHPStorm, DataGrip, Docker, Git, Linux. Além disso, foi possível estabelecer soft skills como trabalho em equipe, resolução de problemas e parceria.</li><li>Customização de interfaces responsivas nos sistemas internos da empresa (front-end), visando seguir as recomendações passadas pela equipe de design. Nestas atuações, fiz uso de tecnologias como HTML5, CSS3, JavaScript, Bootstrap, JQuery e outras bibliotecas populares.</li><li>Aprimoramento no Cake e CodeIgniter, frameworks PHP mais objetivos que possibilitaram estabelecer novas conexões com o banco de dados, efetuar requisições curl de forma otimizada, aplicar a programação orientada a objetos de maneira prática para cumprir as missões dentro da equipe.</li><li>Desenvolvimento completo de Applications Programming Interfaces (APIs) com o framework Laravel, em suas versões mais atuais. Acompanhamento por inteiro dos projetos, desde seus planejamentos iniciais até o deploy e, posteriormente, manutenção. Nestes aplicativos construí sistemas de manipulação de dados, autenticação de usuários, operações manuais com SQL e documentação dos respectivos endpoints com Swagger.</li></ul></div>', 2
+        SELECT '<div class=\"summary-item\"><h4>Analista Programador PHP</h4><h5>08/2023 - Atualmente</h5><p>Grupo Criar - <em>Ribeirão Preto, São Paulo (Presencial) </em></p><ul><li>Convivência em um ambiente de desenvolvimento de tecnologias de forma presencial. Neste, havia o constante uso de ferramentas como PHPStorm, DataGrip, Docker, Git, Linux. Além disso, foi possível estabelecer soft skills como trabalho em equipe, resolução de problemas e parceria.</li><li>Customização de interfaces responsivas nos sistemas internos da empresa (front-end), visando seguir as recomendações passadas pela equipe de design. Nestas atuações, fiz uso de tecnologias como HTML5, CSS3, JavaScript, Bootstrap, JQuery e outras bibliotecas populares.</li><li>Aprimoramento no Cake e CodeIgniter, frameworks PHP mais objetivos que possibilitaram estabelecer novas conexões com o banco de dados, efetuar requisições curl de forma otimizada, aplicar a programação orientada a objetos de maneira prática para cumprir as missões dentro da equipe.</li><li>Desenvolvimento completo de Applications Programming Interfaces (APIs) com o framework Laravel, em suas versões mais atuais. Acompanhamento por inteiro dos projetos, desde seus planejamentos iniciais até o deploy e, posteriormente, manutenção. Nestes aplicativos construí sistemas de manipulação de dados, autenticação de usuários, operações manuais com SQL e documentação dos respectivos endpoints com Swagger.</li><li>Principal responsável técnico pela manutenção, correções e implementações de melhorias no sistema de controle do estoque de materiais da empresa. Frequentemente em contato com a equipe de logística, definindo regras de negócio que seriam aplicadas com Laravel e Cake. Além disso, alinhava diretamente com o DBA a criação de procedures do MySQL integradas ao PHP para garantir a legitimidade das informações.</li></ul></div>', 2
         WHERE NOT EXISTS (SELECT 1 FROM summaries_tbl WHERE id = 4);
         
         INSERT INTO summaries_tbl (html, type)

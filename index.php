@@ -4,6 +4,9 @@ require_once __DIR__ . "/core/Core.php";
 require_once __DIR__ . "/models/Database.php";
 require_once __DIR__ . "/router/routes.php";
 
+$core = new Core();
+$core->loadEnv(".env");
+
 $database = new Database();
 $database->prepareDataBaseInitial();
 
@@ -17,5 +20,4 @@ spl_autoload_register(function ($file) {
     }
 });
 
-$core = new Core();
 $core->run($routes);

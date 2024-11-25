@@ -50,6 +50,8 @@ class PortfolioController extends BaseController
         $conditions = "WHERE type = " . $summaries->getType("profission");
         $data["profission"] = $summaries->all($conditions);
 
+        $data["contact"]["actionForm"] = $this->getRouteBase() . "/send-email";
+
         return $data;
     }
 
@@ -60,7 +62,6 @@ class PortfolioController extends BaseController
         if ($type === "js") {
             $files = [
                 "public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
-                "public/assets/vendor/php-email-form/validate.js",
                 "public/assets/vendor/aos/aos.js",
                 "public/assets/vendor/typed.js/typed.umd.js",
                 "public/assets/vendor/purecounter/purecounter_vanilla.js",
@@ -69,8 +70,7 @@ class PortfolioController extends BaseController
                 "public/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js",
                 "public/assets/vendor/isotope-layout/isotope.pkgd.min.js",
                 "public/assets/vendor/swiper/swiper-bundle.min.js",
-                "public/assets/js/main.js",
-                "public/forms/contact.js"
+                "public/assets/js/main.js"
 
             ];
         }

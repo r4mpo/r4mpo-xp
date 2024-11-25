@@ -39,4 +39,33 @@ class Core
         $html .= "<style>body {background-color: #f4f4f4;font-family: Arial, sans-serif;display: flex;justify-content: center;align-items: center;height: 100vh;margin: 0;}.container {text-align: center;background-color: #fff;padding: 20px;border-radius: 8px;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);}</style>";
         return $html;
     }
+
+    public function loadEnv($file)
+    {
+        if (!file_exists($file)) {
+            die("Arquivo com variáveis de ambiente não foi encontrado.");
+        }
+    
+        // Lê o conteúdo do file
+        $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        
+        // Itera sobre cada linha e define a variável de ambiente
+        foreach ($lines as $line) {
+            // Ignora comentários (linhas que começam com #)
+            if (strpos(trim($line), "#") === 0) {
+                continue;
+            }
+    
+            // Divide a linha em chave e valor
+            list($key, $value) = explode("=", $line, 2);
+    
+            // Remove espaços extras
+            $key = trim($key);
+            $value = trim($value);
+    
+            // Define a variável de ambiente
+            putenv("{$key}={$value}");
+        }
+    }
+    
 }
