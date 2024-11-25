@@ -2,9 +2,18 @@
 
 class HomeController extends BaseController
 {
-    public function index()
+    public function index(): void
     {
-        echo 'Home';
-        exit;
+
+        $alert = $_SESSION["alert"] ?? "";
+        unset($_SESSION["alert"]);
+
+        $this->loadView([
+            "view"          => 'home/index',
+            "title"         => 'Home',
+            'alert'         => $alert,
+            "scripts"       => $this->scripts,
+            "stylesheets"   => $this->stylesheets,
+        ]);
     }
 }

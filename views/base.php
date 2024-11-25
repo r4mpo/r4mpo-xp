@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <?php echo $stylesheets; ?>
+    <?php echo isset($stylesheets) ? $stylesheets : ""; ?>
 
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -23,6 +23,14 @@
 
 </head>
 
-<?php require_once __DIR__ . "/" . $view . ".php"; ?>
+<?php
+
+if (isset($_SESSION["alert"]) && !empty($_SESSION["alert"])) {
+    echo $_SESSION["alert"];
+}
+
+require_once __DIR__ . "/" . $view . ".php";
+
+?>
 
 </html>

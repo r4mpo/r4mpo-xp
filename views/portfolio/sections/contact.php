@@ -52,7 +52,7 @@
                         </div>
                         <div class="col-md-12 text-center">
                             <div class="error-message"></div>
-                            <button type="button">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </form>

@@ -40,7 +40,7 @@ class Core
         return $html;
     }
 
-    public function loadEnv($file)
+    public function loadEnv($file): void
     {
         if (!file_exists($file)) {
             die("Arquivo com variáveis de ambiente não foi encontrado.");
