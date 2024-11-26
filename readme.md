@@ -8,7 +8,7 @@
 
 ### **Tecnologias**
 
-#### * PHP
+* PHP
 * HTML
 * CSS
 * MySQL
